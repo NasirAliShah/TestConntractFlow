@@ -1,0 +1,36 @@
+{
+  "emulators": {
+    "default": {
+      "port": 3569,
+      "serviceAccount": "emulator-account"
+    }
+  },
+  "contracts": {
+    "TestContract": "./contracts/TestContract.cdc"
+  },
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "key": "df5afc9179a82baadec14ad3e3bd455627de06067242ff51c30a5667d7de638e"
+    },
+    "emulator-NFTContract": {
+      "address": "0x01cf0e2f2f715450",
+      "key": {
+        "type": "hex",
+        "hashAlgorithm": "SHA3_256",
+        "signatureAlgorithm": "ECDSA_secp256k1",
+        "privateKey": "037c10a92773baa0483d5e98e6ae43e1b6b5394de606650677bc5156b3145126"
+      }
+    }
+  },
+  "deployments": {
+    "emulator": {
+      "emulator-NFTContract": ["TestContract"]
+    }
+  }
+}
